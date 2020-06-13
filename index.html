@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>TicTacToe With Kakaofriends</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link href="index.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>TickTackToe with KakaoFriends</h1>
+            <div class="controller">
+                <div class="gametype-box" id="js-gametype-box">
+                    <input type="radio" name="player" id="pvc" checked />
+                    <label for="pvc" class="checked-pvc" id="pvc-label">player vs computer</label>
+                    <input type="radio" name="player" id="pvp" />
+                    <label for="pvp" id="pvp-label">player1 vs player2</label>
+                </div>
+                <div class="character-list" id="js-character-list">
+                    <div class="character ryan"><span>ryan</span></div>
+                    <div class="character apeach"><span>apeach</span></div>
+                    <div class="character muzi"><span>muzi</span></div>
+                    <div class="character frodo"><span>frodo</span></div>
+                    <div class="character neo"><span>neo</span></div>
+                    <div class="character tube"><span>tube</span></div>
+                    <div class="character jay-g"><span>jay-g</span></div>
+                    <div class="character con"><span>con</span></div>
+                </div>
+                <div class="choice-list" id="js-choice-list">
+                    <div class="player1 choosing">player</div>
+                    <div class="player1-character"></div>
+                    <div class="player2">computer</div>
+                    <div class="player2-character"></div>
+                </div>
+                <div class="msg" id="js-msg">start after choosing or click start right now</div>
+            </div>
+            <div class="board-container">
+                <div class="board">
+                    <div class="block" id="00"></div>
+                    <div class="block" id="01"></div>
+                    <div class="block" id="02"></div>
+                    <div class="block" id="10"></div>
+                    <div class="block" id="11"></div>
+                    <div class="block" id="12"></div>
+                    <div class="block" id="20"></div>
+                    <div class="block" id="21"></div>
+                    <div class="block" id="22"></div>
+                    <div class="button-overlay" id="js-button-overlay">
+                        <button class="start-button" id="js-start-button">start</button>
+                    </div>
+                </div>
+            </div>
+            <button class="restart-button hidden" id="js-restart-button">restart</button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

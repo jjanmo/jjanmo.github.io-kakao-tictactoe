@@ -1,0 +1,336 @@
+html,
+body {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+h1 {
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* controller */
+
+.controller {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+/* gametype-box */
+
+.gametype-box {
+    display: flex;
+    width: 100%;
+    background-color: rgba(245, 181, 63, 0.8);
+    border-radius: 5px;
+}
+
+input[type='radio'] {
+    display: none;
+}
+label {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+label:hover {
+    text-decoration: underline solid red;
+}
+
+.checked-pvc {
+    background-color: #edd4d5;
+}
+
+.checked-pvp {
+    background-color: #93b7cd;
+}
+
+/* character-list  */
+
+.character-list {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.character {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-image: url('images/kakao-character.png');
+    background-repeat: no-repeat;
+    background-size: 350%;
+    cursor: pointer;
+    border-radius: 50%;
+    /* padding: 10px 0; */
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+}
+
+.character > span {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.character:hover {
+    background-color: #eee;
+}
+
+/* character image in list */
+
+.ryan {
+    background-position: 3px 0;
+}
+.apeach {
+    background-position: -54px 0;
+}
+.muzi {
+    background-position: -111px 0;
+}
+.frodo {
+    background-position: -169px 0;
+}
+.neo {
+    background-position: 2px -85px;
+}
+.tube {
+    background-position: -54px -85px;
+}
+.jay-g {
+    background-position: -111px -84px;
+}
+.con {
+    background-position: -168px -92px;
+}
+
+.choosed {
+    text-decoration: line-through solid red;
+}
+
+.choice-list {
+    display: flex;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.choice-list > div {
+    width: 25%;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 3px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.5rem 0.3rem;
+    border-radius: 5px;
+}
+
+.choice-list > div:nth-child(2n) {
+    text-transform: capitalize;
+    background-color: #95a5a6;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.choice-list > div:nth-child(2n-1) {
+    cursor: pointer;
+}
+
+.choosing {
+    border-bottom: 5px solid tomato;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 1rem 0;
+    position: relative;
+    background-color: rgba(245, 181, 63, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    border: 3px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    transition: transform 0.5s linear;
+}
+
+.block:nth-child(-n + 3) {
+    border-top: none;
+}
+.block:nth-child(3n-2) {
+    border-left: none;
+}
+.block:nth-child(3n) {
+    border-right: none;
+}
+.block:nth-child(n + 7) {
+    border-bottom: none;
+}
+
+/* character image in block */
+
+.clicked {
+    background-image: url('images/kakao-character.png');
+    background-repeat: no-repeat;
+    background-size: 450% auto;
+}
+
+.ryan-in-block {
+    background-position: -9px -15px;
+}
+.apeach-in-block {
+    background-position: -110px -17px;
+}
+.muzi-in-block {
+    background-position: -212px -15px;
+}
+.frodo-in-block {
+    background-position: -310px -14px;
+}
+.neo-in-block {
+    background-position: -9px -163px;
+}
+.tube-in-block {
+    background-position: -111px -163px;
+}
+.jay-g-in-block {
+    background-position: -211px -163px;
+}
+.con-in-block {
+    background-position: -313px -177px;
+}
+
+.button-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-button {
+    all: unset;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #ffdc00;
+    color: #1e1e1e;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: 3px solid #f1c40f;
+    border-radius: 25px;
+    padding: 0.5rem 2rem;
+    transition: all 0.1s linear;
+}
+
+.start-button:active {
+    transform: scale(0.95);
+}
+
+.hidden {
+    display: none;
+}
+
+.msg {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #2980b9;
+    text-align: center;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+}
+
+.warning {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.notice {
+    color: #16a085;
+    font-weight: 500;
+}
+
+.turn {
+    color: #e67e22;
+}
+
+.winner {
+    color: #eb4d4b;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.restart-button {
+    /* all: unset; */
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #f0932b;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.1s linear;
+}
+
+.restart-button:active {
+    transform: scale(0.95);
+}
+
+.win {
+    background-color: #eb4d4b;
+    transform: scale(1.1);
+}
+
+.draw {
+    background-color: #c7ecee;
+    transform: scale(1.1);
+}
