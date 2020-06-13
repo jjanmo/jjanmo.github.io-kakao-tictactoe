@@ -2,9 +2,8 @@
 > Play tictactoe with Kakaofriends
 
 ## Preview
-![pvc](pvc.gif) 
+![pvc](./images/pvc.gif) 
 > 컴퓨터와의 대결(PvC)
-
 
 ![pvp](./images/pvp.gif) 
 > 2인용 게임(PvP)
