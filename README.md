@@ -6,14 +6,14 @@
 > 컴퓨터와의 대결(PvC)
 
 
-![pvp](pvp.gif) 
+![pvp](./images/pvp.gif) 
 > 2인용 게임(PvP)
  
-![random](random.gif) 
+![random](./images/random.gif) 
 > 캐릭터 선택을 하지 않고 시작하는 경우, 플레이어의 캐릭터가 랜덤으로 선택되어진다.
 (컴퓨터의 캐릭터는 항상 랜덤이다.)
 
-![draw](draw.gif) 
+![draw](./images/draw.gif) 
 > 무승부
 
 
