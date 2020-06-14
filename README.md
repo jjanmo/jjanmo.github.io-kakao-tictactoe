@@ -1,6 +1,8 @@
 # TicTacToe 
 > Play tictactoe with Kakaofriends
 
+> [DEMO](https://jjanmo.github.io/jjanmo.github.io-kakao-tictactoe/)
+
 ## Preview
 ![pvc](./images/pvc.gif) 
 > 컴퓨터와의 대결(PvC)
